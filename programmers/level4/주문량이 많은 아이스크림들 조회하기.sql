@@ -1,0 +1,8 @@
+-- https://school.programmers.co.kr/learn/courses/30/lessons/133027
+SELECT h.FLAVOR
+FROM FIRST_HALF h
+JOIN JULY j
+ON h.FLAVOR = j.FLAVOR
+GROUP BY j.FLAVOR
+ORDER BY SUM(j.TOTAL_ORDER + h.TOTAL_ORDER) DESC
+LIMIT 3
